@@ -47,6 +47,7 @@ Write a function, that when receives that map, returns the string “Hello, Alic
 
 func = fn
 person = %{first_name: fname, second_name: sname, age: a}-> "Hello, " <> person.first_name <> " " <> person.second_name <> "!"
+_-> "The map isn't matching!"
 end 
 
 Put the functions in a text file, and push it to your repo
