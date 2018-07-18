@@ -1,4 +1,4 @@
-1.Write a function sentence, that takes either “.”, “!”, or “?”. It should return a new function,
+1.Write a function sentence, that takes either â€œ.â€, â€œ!â€, or â€œ?â€. It should return a new function,
 that takes a second string and uses the suffix you already passed, and appends it to the second string.
 
 sentence = fn x ->
@@ -11,23 +11,21 @@ sentence = fn x ->
   end
  end
 
-
-2.Given a list [“Alice Addison”, “Bob Benetton”], you should (using Enum.map) return a list
-[[“Alice”, “Addison”], [“Bob”, “Benetton”]]
+2.Given a list [â€œAlice Addisonâ€, â€œBob Benettonâ€], you should (using Enum.map) return a list
+[[â€œAliceâ€, â€œAddisonâ€], [â€œBobâ€, â€œBenettonâ€]]
 
 list = ["Alice Addison", "Bob Benetton"]
 Enum.map(list, fn a -> String.split(a) end)
 
+3.Given a list [%{name: â€œAlice Addisonâ€, age: 14}, %{name: â€œBob Benettonâ€, age: 21}, %{name: â€œEve
+Elliotâ€, age: 18}], return the following list: [â€œAlice Addison: 14 years oldâ€, â€œBob Benetton:
+21 years oldâ€, â€œEve Elliot: 18 years oldâ€]
 
-3.Given a list [%{name: “Alice Addison”, age: 14}, %{name: “Bob Benetton”, age: 21}, %{name: “Eve
-Elliot”, age: 18}], return the following list: [“Alice Addison: 14 years old”, “Bob Benetton:
-21 years old”, “Eve Elliot: 18 years old”]
-
-list = [%{name: “Alice Addison”, age: 14},%{name: “Bob Benetton”, age: 21},%{name: “Eve Elliot”, age: 18}]
+list = [%{name: â€œAlice Addisonâ€, age: 14},%{name: â€œBob Benettonâ€, age: 21},%{name: â€œEve Elliotâ€, age: 18}]
 Enum.map(second_list, fn a -> Map.to_list(a) end)
 
-4.Given the list from the previous task, made an additional case for when the age is “1”, then it
-should output “<name>: 1 year old”
+4.Given the list from the previous task, made an additional case for when the age is â€œ1â€, then it
+should output â€œ<name>: 1 year oldâ€
 
 list =[%{name: "Alice Addison", age: 14}, %{name: "Bob Benetton", age: 21}, %{name: "Eve Elliot", age: 18}, %{name: "Ivan Ivanov", age: 1}]
 Enum.find_value(list, fn a -> 
@@ -36,18 +34,17 @@ Enum.find_value(list, fn a ->
     end
    end)
 
-5.Given the following list: [“An example sentence”, “Another sentence”, “Third sentence”], remove
-every sentence that has at least one “a”
+5.Given the following list: [â€œAn example sentenceâ€, â€œAnother sentenceâ€, â€œThird sentenceâ€], remove
+every sentence that has at least one â€œaâ€
 
-list= [“An example sentence”, “Another sentence”, “Third sentence”]
+list= [â€œAn example sentenceâ€, â€œAnother sentenceâ€, â€œThird sentenceâ€]
 Enum.filter(list, fn a-> !String.contains? a, "a" end)
 
 6.Given the following matrix: [[1, 2, 3], [4, 5, 6], [7, 8, 9]] Double every element of it, preserving
-the structure. Make so that it doesn’t matter what size the dimensions are.
+the structure. Make so that it doesnâ€™t matter what size the dimensions are.
 
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 Enum.map(matrix, fn a -> Enum.map(a, fn b -> b*2 end) end)
-
 
 7.Given the matrix from the previous exercise, return only the even numbers, preserving the structure.
 
