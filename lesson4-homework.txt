@@ -1,10 +1,10 @@
 1.Write a function sentence, that takes either “.”, “!”, or “?”. It should return a new function,
 that takes a second string and uses the suffix you already passed, and appends it to the second string.
 
-sentence = fn x ->
+sentence = fn a ->
  fn second_string ->    
-  if x == "." || x == "!" || x == "?" do    
-  second_string <> x
+  if a == "." || a == "!" || a == "?" do    
+  second_string <> a
  else
   IO.puts "You should've provided either '.', '!' or '?'"
    end
