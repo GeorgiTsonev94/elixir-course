@@ -1,0 +1,55 @@
+1.Write a function sentence, that takes either “.”, “!”, or “?”. It should return a new function,
+that takes a second string and uses the suffix you already passed, and appends it to the second string.
+
+sentence = fn x ->
+ fn second_string ->    
+  if x == "." || x == "!" || x == "?" do    
+  second_string <> x
+ else
+  IO.puts "You should've provided either '.', '!' or '?'"
+   end
+  end
+ end
+
+
+2.Given a list [“Alice Addison”, “Bob Benetton”], you should (using Enum.map) return a list
+[[“Alice”, “Addison”], [“Bob”, “Benetton”]]
+
+list = ["Alice Addison", "Bob Benetton"]
+Enum.map(list, fn a -> String.split(a) end)
+
+
+3.Given a list [%{name: “Alice Addison”, age: 14}, %{name: “Bob Benetton”, age: 21}, %{name: “Eve
+Elliot”, age: 18}], return the following list: [“Alice Addison: 14 years old”, “Bob Benetton:
+21 years old”, “Eve Elliot: 18 years old”]
+
+list = [%{name: “Alice Addison”, age: 14},%{name: “Bob Benetton”, age: 21},%{name: “Eve Elliot”, age: 18}]
+Enum.map(second_list, fn a -> Map.to_list(a) end)
+
+4.Given the list from the previous task, made an additional case for when the age is “1”, then it
+should output “<name>: 1 year old”
+
+list =[%{name: "Alice Addison", age: 14}, %{name: "Bob Benetton", age: 21}, %{name: "Eve Elliot", age: 18}, %{name: "Ivan Ivanov", age: 1}]
+Enum.find_value(list, fn a -> 
+  if a.age == 1 do
+    to_string(a.name) <> " : " <> to_string(a.age) <> " year old" 
+    end
+   end)
+
+5.Given the following list: [“An example sentence”, “Another sentence”, “Third sentence”], remove
+every sentence that has at least one “a”
+
+list= [“An example sentence”, “Another sentence”, “Third sentence”]
+Enum.filter(list, fn a-> !String.contains? a, "a" end)
+
+6.Given the following matrix: [[1, 2, 3], [4, 5, 6], [7, 8, 9]] Double every element of it, preserving
+the structure. Make so that it doesn’t matter what size the dimensions are.
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+Enum.map(matrix, fn a -> Enum.map(a, fn b -> b*2 end) end)
+
+
+7.Given the matrix from the previous exercise, return only the even numbers, preserving the structure.
+
+Enum.map(matrix, fn a -> Enum.filter(a, fn b -> rem(b,2) == 0 end) end)
+
