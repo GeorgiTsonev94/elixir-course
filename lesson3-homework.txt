@@ -10,6 +10,7 @@ length_of_tuple = fn
 {a,b,c} -> 3
 {a,b,c,d} -> 4
 _-> "Shouldn't you use list"
+end
 
 Homework
 
@@ -36,6 +37,7 @@ Write a function that checks if list is empty. It should return “true” if it
 func = fn
 [] -> "true"
 _-> "false"
+end
 
 
 You have a map with the following structure:
@@ -47,7 +49,7 @@ Write a function, that when receives that map, returns the string “Hello, Alic
 
 func = fn
 person = %{first_name: fname, second_name: sname, age: a}-> "Hello, " <> person.first_name <> " " <> person.second_name <> "!"
+_-> "The map isn't matching!"
 end 
 
 Put the functions in a text file, and push it to your repo
-        
