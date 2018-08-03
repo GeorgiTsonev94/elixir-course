@@ -40,7 +40,7 @@ defmodule Homework do
       a == b -> a
       a > b -> biggestDenominator(a-b, b)
       b > a -> biggestDenominator(a, b-a)
-      true -> "The is not any common dominator!"
+      true -> "There isn't any common dominator!"
     end
   end
   
