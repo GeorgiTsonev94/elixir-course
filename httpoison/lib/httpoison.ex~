@@ -1,0 +1,18 @@
+defmodule Dog do
+  @moduledoc """
+  Documentation for Httpoison.
+  """
+
+  @doc """
+  Hello world.
+
+  ## Examples
+
+      iex> Httpoison.hello
+      :world
+
+  """
+  def get_dog_picture() do
+    HTTPoison.get!("https://dog.ceo/api/breeds/image/random")
+  end
+end
